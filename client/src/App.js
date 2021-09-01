@@ -1,22 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar.js';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {cartPage} from './pages/cartPage.js';
+import {homePage} from './pages/cartPage.js';
+import {productPage} from './pages/cartPage.js';
+import { useEffect,useState } from 'react';
+const App=()=>{
+  const [state, setstate] = useState(0);
+  return (
+    <Router>
+      <NavBar click={()=>{}} />
+      <main>
+        <Switch>
+          <Route path="/" component={homePage}/>
+          <Route path="/product:id" component={productPage}/>
+          <Route path="/cart" component={cartPage}/>
+        </Switch>
+      </main>
+    </Router>
+  )
+}
 
-const App=()=>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
 
 export default App;
