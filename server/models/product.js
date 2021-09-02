@@ -1,4 +1,4 @@
-const moongoose=require('mongoose');
+const mongoose=require('mongoose');
 //define a comment schema for the database
 const productSchema = new mongoose.Schema({
     name: {

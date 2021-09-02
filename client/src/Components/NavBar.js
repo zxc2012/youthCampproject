@@ -11,7 +11,7 @@ const NavBar = (props) =>
             <Link to="/cart" className="">
                 <i className="fas fa-shopping-cart" />
                 <span>
-                    Cart {}
+                    Cart {props.cartnum}
                 </span>
             </Link>
         </div>
